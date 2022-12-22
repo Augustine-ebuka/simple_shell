@@ -1,18 +1,23 @@
-**0x16. C - Simple Shell
+# 0x16. C - Simple Shell
 By Spencer Cheng, featuring Julien Barbier Project to be done in teams of 2 people (Raheemah Abdullateef, Augustine Obetta)
 
-** Learning Objectives
+# Learning Objectives
 At the end of this project, you are expected to be able to explain to anyone, without the help of Google
 
-**General
+# General
 Who designed and implemented the original Unix operating system Who wrote the first version of the UNIX shell Who invented the B programming language (the direct predecessor to the C programming language) Who is Ken Thompson How does a shell work What is a pid and a ppid How to manipulate the environment of the current process What is the difference between a function and a system call How to create processes What are the three prototypes of main How does the shell use the PATH to find the programs How to execute another program with the execve system call How to suspend the execution of a process until one of its children terminates What is EOF / “end-of-file”?
+#Introduction
+A Unix shell is a command-line interface that allows users to interact with the operating system. It is a command interpreter that reads and executes commands typed at a terminal or entered into a script file. The Unix shell is a powerful tool that allows users to perform a wide range of tasks, such as running programs, modifying files, and managing system resources.
 
-**Requirements
+There are many different Unix shells available, including the Bourne shell (sh), the C shell (csh), the Korn shell (ksh), and the Bourne Again shell (bash). Each shell has its own set of built-in commands and features, but they all allow users to enter commands in a similar way. For example, users can navigate the file system, run programs, and perform other tasks by entering commands at the prompt.
 
-**Genaral
+In addition to the built-in commands, Unix shells also support shell scripts, which are text files that contain a series of commands to be executed in sequence. Shell scripts are often used to automate tasks and to customize the behavior of the operating system.
+# Requirements
+
+# Genaral
 Allowed editors: vi, vim, emacs All your files will be compiled on Ubuntu 20.04 LTS using gcc, using the options -Wall -Werror -Wextra -pedantic -std=gnu89 All your files should end with a new line A README.md file, at the root of the folder of the project is mandatory Your code should use the Betty style. It will be checked using betty-style.pl and betty-doc.pl Your shell should not have any memory leaks No more than 5 functions per file All your header files should be include guarded Use system calls only when you need to (why?)
 
-GitHub
+# GitHub
 
 *There should be one project repository per group. If you and your partner have a repository with the same name in both your accounts, you risk a 0% score. Add your partner as a collaborator. *
 
@@ -36,7 +41,7 @@ access (man 2 access) chdir (man 2 chdir) close (man 2 close) closedir (man 3 cl
 
 
 
-Compilation
+# Compilation
 
 Your shell will be compiled this way:
 
@@ -44,31 +49,31 @@ gcc -Wall -Werror -Wextra -pedantic -std=gnu89 *.c -o hsh
 
 
 
-files
+# files
 
-README.md - description about the project repo
+- README.md - description about the project repo
 
-man_1_simple_shell - is the man page for the shell we are going to write.
+- man_1_simple_shell - is the man page for the shell we are going to write.
 
-AUTHORS - file at the root of your repository, listing all individuals having contributed content to the repository.
+- AUTHORS - file at the root of your repository, listing all individuals having contributed content to the repository.
 
-main.h - is the header file which contains the standared header file and prototype of o function used in the program.
+- main.h - is the header file which contains the standared header file and prototype of o function used in the program.
 
-main.c - initialize the program with infinite loop by call the prompt function
+- main.c - initialize the program with infinite loop by call the prompt function
 
-prompt.c - it use getline system call to read the input from the user and run infinite loop with fork to keep prompt going.
+- prompt.c - it use getline system call to read the input from the user and run infinite loop with fork to keep prompt going.
 
-special_character - It identiies if the special inputs such as if the frist input is slash,the user typed exit or env...
+- special_character - It identiies if the special inputs such as if the frist input is slash,the user typed exit or env...
 
-string.c -it handles the strings(string length, write string,find string in directory,concatane strings....)
+- string.c -it handles the strings(string length, write string,find string in directory,concatane strings....)
 
-cmd.c - it finds the command the user entered.
+- cmd.c - it finds the command the user entered.
 
-execute.c - execute the command.
+- execute.c - execute the command.
 
-How to add Author file
+- How to add Author file
 
-Bash script for generating the list of authors in git repo
+- Bash script for generating the list of authors in git repo
 
 
 
